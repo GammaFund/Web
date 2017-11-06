@@ -26,7 +26,7 @@ class PreviewHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    routes.DomainRoute(r'<:(gammafund.org|localhost)>', [
+    routes.DomainRoute(r'<:(gammafund.org|www.gammafund.org|localhost)>', [
         webapp2.Route('/', MainHandler),
     ]),
 
