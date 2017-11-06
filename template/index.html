@@ -1,0 +1,215 @@
+
+{% extends "base.html" %}
+
+
+
+{% block body_content %}
+
+
+
+<div class="home_background full_block">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+
+                <div class="section ico_section">
+                    <div class="section_item"><div class="section_item_inner">
+                        <div class="section_announcement">ICO Coming soon! </div>
+
+                        <div class="info_title">GAMMA Contract Address</div>
+                        <div class="info_value ico_address_value">To be announced</div>
+
+                        <div class="info_title">GAMMA Contract JSON Interface</div>
+                        <a class="waves-effect waves-light btn orange accent-3 toggle_json" >View JSON</a>
+
+
+                        <div class="json_div">
+                            <textarea onclick="this.select()">JSON will be available when ICO begins
+</textarea>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="full_block price_block">
+    <div class="container">
+        <div class="row">
+
+            <div class="col l3 m6 s12">
+                <div class="section">
+                    <span class="ico_stat_text">0</span>
+                    <span class="ico_tip_text">total γ Tokens issued</span>
+                </div>
+            </div>
+
+            <div class="col l3 m6 s12">
+                <div class="section">
+                    <span class="ico_stat_text">0</span>
+                    <span class="ico_tip_text">total ether funded</span>
+                </div>
+            </div>
+
+            <div class="col l3 m6 s12">
+                <div class="section">
+                    <span class="ico_stat_text">0 Ether</span>
+                    <span class="ico_tip_text">current price for 100 γ</span>
+                </div>
+            </div>
+
+            <div class="col l3 m6 s12">
+                <div class="section">
+                    <span class="ico_stat_text">10000000</span>
+                    <span class="ico_tip_text">γ remaining at current tier</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="section_supp">Updated every x mins - Last updated at a moment ago</div>
+
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col l8 s12">
+
+
+
+            <div class="section">
+                <div class="section_item"><div class="section_item_inner ico_details_box">
+
+                    <div class="section_title">ICO Details</div>
+
+                    <div class="info_title">ICO Starts on</div>
+                    <div class="info_value">To be announced</div>
+
+                    <div class="info_title">ICO ends on</div>
+                    <div class="info_value">To be announced</div>
+                    <div class="info_tips"></div>
+
+                    <div class="info_title">Price details</div>
+
+                    {# <div id="price_tier_chart" style="height: 350px;"></div> #}
+                    {# <div id="tokens_issued_chart" style="height: 80px;"></div> #}
+                    <div class="info_value price_box">
+    <table>
+    <tr><td>Tier 1</td><td>1.00 ETH for 100 γ (total 5M γ)</td></tr>
+    <tr><td>Tier 2</td><td>1.05 ETH for 100 γ (total 5M γ)</td></tr>
+    <tr><td>Tier 3</td><td>1.10 ETH for 100 γ (total 5M γ)</td></tr>
+    <tr><td>Tier 4</td><td>1.15 ETH for 100 γ (total 5M γ)</td></tr>
+    <tr><td>Tier 5</td><td>1.20 ETH for 100 γ (total 5M γ)</td></tr>
+    </table>
+</div>
+                    <div class="info_tips">Token price is dynamically updated based on a number of tokens issued. Early birds can get tokens at a relatively low price.</div>
+
+
+                </div></div>
+            </div>
+
+
+            <div class="section">
+                <div class="section_item"><div class="section_item_inner ico_details_box">
+                    <img src="/images/covered_call.jpg" />
+                </div></div>
+            </div>
+
+        </div>
+        <div class="col l4 s12">
+
+            <div class="section">
+                <div class="section_item"><div class="section_item_inner">
+
+                    <div class="section_title">What is GAMMA?</div>
+                    <div class="video-container">
+
+                    </div>
+                </div></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+{% block body_footerscript_content %}
+
+<script type="text/javascript">
+
+
+$(".toggle_json").click(function(){
+    $(".json_div").toggle();
+});
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Tier',  'Price per 100 GAMMA Tokens in ETH'],
+        ['0-5M', 1],
+        ['5M-10M', 1.05],
+        ['10M-15M', 1.1],
+        ['15M-20M', 1.15],
+        ['20M-25M', 1.2]
+    ]);
+
+    var options = {
+        backgroundColor: { fill: 'transparent' },
+        chartArea: {width: '80%', height: '80%'},
+        title: 'Price Tier of GAMMA Tokens',
+        legend: { position: "none" },
+        vAxis: {
+            minValue: 0.9,
+            ticks: [0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25]
+        }
+    };
+
+    var chart = new google.visualization.SteppedAreaChart(document.getElementById('price_tier_chart'));
+
+    chart.draw(data, options);
+
+
+    var data2 = google.visualization.arrayToDataTable([
+        ['', 'Tokens issued',],
+        ['', 0]
+    ]);
+
+    var options2 = {
+        title: 'Tokens issued vs ICO targets',
+        backgroundColor: { fill:'transparent' },
+        chartArea: {width: '80%', height: '30%'},
+        legend: { position: "none" },
+        hAxis: {
+            minValue: 0,
+            maxValue: 25000000,
+            ticks: [{v:15000000, f:'min target'}, {v:25000000, f:'max target'}]
+        }
+    };
+
+    var chart2 = new google.visualization.BarChart(document.getElementById('tokens_issued_chart'));
+    chart2.draw(data2, options2);
+}
+
+</script>
+
+
+{% endblock %}
+

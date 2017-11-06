@@ -1,5 +1,5 @@
 application: gammafund-184702
-version: 1
+version: preview
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -9,9 +9,21 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
+- url: /style
+  static_dir: style
+
+- url: /script
+  static_dir: script
+
+- url: /images
+  static_dir: images
+
 - url: .*
   script: main.app
 
 libraries:
 - name: webapp2
   version: "2.5.2"
+
+- name: MySQLdb
+  version: "latest"
