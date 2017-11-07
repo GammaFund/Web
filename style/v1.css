@@ -1,32 +1,52 @@
 
-body{border-top: 4px solid #ff5722;}
+body{
+    border-top: 4px solid #ff5722;
+    background-image: repeating-linear-gradient(135deg, #fff, #fff 20px, #fffceb 20px, #fffceb 51px);
+    min-height: 400px;
+}
 
 .header{position:relative;}
 .header ul{margin:0;padding:0;display: inline-block;}
 .header ul li{margin:0;padding:0;}
 ul.logo_ul{}
-ul.top_navbar{float:right; padding:0 6px;background-color: #ffd6c3;border-radius: 0 0 4px 4px;}
-ul.top_navbar li{display: inline-block;padding:10px 14px;color: #ff3b3b;}
-ul.top_navbar a:hover li{background-color: #ffebe4;}
-.link_bar{position: absolute;bottom:10px;right:0;z-index: 1;}
+
+.link_bar{
+    position: absolute; top: 28px; right:0;z-index: 1;
+}
 .link_bar a{margin-left: 6px;}
 
-.logo{width:180px;}
+.logo{font-size: 3em; font-family: verdana;color: #ff5723;font-weight: 100;}
 .headline{font-size: 1.3em;color:#777;}
 .headline_text{}
 
-.full_block .row{margin-bottom: 0;}
-.header_div{margin-bottom: 4px;}
-.home_background{background: url("/images/earth_world_lighting.jpg");background-size: 100% auto;background-position: 50% 30%;}
-.home_background .section_item .section_item_inner{background-color: rgba(255,255,255,0.7);}
+.header_div{
+    padding-bottom: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.section_item_inner{
+    background-color: rgba(255,255,255,0.7); border: 2px solid #ff5723;
+}
+.signup_msg{padding:6px 0; color: #777;}
+#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+#mc_embed_signup form{padding-left: 0 !important;}
+#mc_embed_signup input.button{
+    padding: 4px;
+    height: auto;
+    margin-top: 14px !important;
+}
+
+
+/*
+
 .price_block{border-left:none;border-right:none;text-align: center;}
+*/
 
 .footer_block{background-color: #413b34;padding:20px;}
 .footer_block nav{box-shadow: none;background-color: transparent;}
 .footer_block i{font-size: 1.7em;}
 .footer_block .links_ui{float:right;}
 .footer_block nav ul a:hover{background-color: rgba(255,255,255,0.1);}
-
 .page_headline_bar{
     font-size: 1.7em;padding:16px 0;border-top: 2px solid #ddd;border-bottom: 2px solid #ddd;
     background-color:#f5f5f5;
@@ -37,7 +57,7 @@ ul.top_navbar a:hover li{background-color: #ffebe4;}
 .section_supp{font-size: 0.9em;font-style: italic;color:#aaa;display: inline-block;float: right;margin:6px 0;}
 .section_item{}
 .section_item .section_item_inner{
-    margin:4px;border:1px solid #ddd;background-color: #f8f8f8;border-radius: 4px;
+    margin:4px;border:2px solid #ddd;background-color: #fff;border-radius: 4px;
     padding:12px;
 }
 .section_item .ico_details_box{
@@ -46,8 +66,8 @@ ul.top_navbar a:hover li{background-color: #ffebe4;}
 .section_announcement{font-size: 2.5em;color:#ff5722;}
 
 a.download_json{color:#ff5722;}
-.ico_section{padding:26px;}
-.ico_section .section_item .section_item_inner{padding:20px 30px;min-height:300px;}
+.ico_section{padding: 30px 0;}
+.ico_section .section_item .section_item_inner{padding:50px 40px;min-height:300px;}
 .ico_stat_text{font-size: 2.1em;display: block;color: #fff;}
 .ico_tip_text{font-size: 0.9em;color: #bdbdbd;}
 .ico_address_value{
@@ -59,6 +79,8 @@ a.download_json{color:#ff5722;}
 .ico_section .info_title {margin-top: 18px;}
 .ico_section .info_value {font-size: 1.8em;}
 
+
+/*
 
 .info_title{font-weight: bold;margin-top: 8px;}
 .info_value{font-size: 1.4em;}
@@ -72,10 +94,11 @@ a.download_json{color:#ff5722;}
 }
 .price_box > table{border:1px solid #cecece;border-collapse: collapse;}
 .price_box > table td{padding: 6px;border:1px solid #cecece;}
-
+*/
 
 .copyright{color:#fff;font-size: 0.8em;}
 
+/*
 input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
     border-bottom: 1px solid #ff5722;
     box-shadow: 0 1px 0 0 #ff5722;
@@ -86,9 +109,11 @@ input[type=text]:focus:not([readonly])+label{
 #ethereum_address_input{margin-bottom: 2px;}
 .address_balance_result div.valid{margin-top:10px;padding:4px 0;color:#060;font-weight: bold;}
 .address_balance_result div.invalid{margin-top:10px;padding:4px 0;color:#a00;}
+*/
 
 /* style for responsive youtube viewer */
 
+/*
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -104,6 +129,7 @@ input[type=text]:focus:not([readonly])+label{
     width: 100%;
     height: 100%;
 }
+*/
 
 @media only screen and (min-width: 993px){
     .container {
@@ -111,7 +137,7 @@ input[type=text]:focus:not([readonly])+label{
     }
 }
 @media only screen and (max-width: 993px){
-    .home_background{background-size: auto 100%;background-position: 50% 50%;}
+    /*.home_background{background-size: auto 100%;background-position: 50% 50%;}*/
     .section_announcement{font-size: 2em;}
 }
 @media only screen and (max-width: 600px){
