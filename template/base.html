@@ -24,12 +24,12 @@
 
 
 </head>
-<body>
+<body class="{% block body_class %}{{ current_page }}{% endblock %}">
 
 
 {% block body_header_content %}
 
-<div class="header_div">
+<div class="header-div">
 
     <div class="container">
         <div class="header">
@@ -38,7 +38,7 @@
 
                     <a href="/" class="logo">Gamma</a>
                     <div class="headline">
-                        <div class="headline_text">Your decentralized venture fund</div>
+                        Your decentralized venture fund
                     </div>
 
                 </li>
@@ -49,6 +49,17 @@
             </ul>
 
         </div>
+    </div>
+</div>
+<div class="nav-bar-container">
+
+    <div class="container">
+        <ul class="nav-bar">
+            <a href="./" {% if current_page == "home" %}class="selected"{% endif %}><li>Home</li></a>
+            <a href="./strategy" {% if current_page == "strategy" %}class="selected"{% endif %}><li>Strategy</li></a>
+            {# <a href="./our-team" {% if current_page == "our-team" %}class="selected"{% endif %}><li>Our Team</li></a> #}
+        </ul>
+
     </div>
 </div>
 
@@ -69,9 +80,9 @@
             <div class="nav-wrapper">
                 &copy; 2017 gammafund.org  All rights reserved.
                 <ul class="links_ui">
-                    <li><a href="https://slack.gammafund.org/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
+                    {# <li><a href="https://slack.gammafund.org/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a></li> #}
                     <li><a href="https://www.facebook.com/gammafund/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="https://twitter.com/gammafund" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    {# <li><a href="https://twitter.com/gammafund" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> #}
                     <li><a href="https://instagram.com/gammafund" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="https://github.com/GammaFund" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                     <li><a href="mailto:contact@gammafund.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>

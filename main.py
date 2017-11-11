@@ -7,28 +7,48 @@ from webapp2_extras import routes
 
 
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        # self.response.write('Coming soon!')
-
-        path = os.path.join(os.path.dirname(__file__), 'template/coming_soon.html')
-        params = {}
-        self.response.out.write(template.render(path, params))
-
-
-class PreviewHandler(webapp2.RequestHandler):
+class IndexView(webapp2.RequestHandler):
     def get(self):
 
         path = os.path.join(os.path.dirname(__file__), 'template/index.html')
-        params = {}
+        params = {
+            'current_page': 'home'
+        }
         self.response.out.write(template.render(path, params))
+
+
+class StrategyView(webapp2.RequestHandler):
+    def get(self):
+
+        path = os.path.join(os.path.dirname(__file__), 'template/strategy.html')
+        params = {
+            'current_page': 'strategy'
+        }
+        self.response.out.write(template.render(path, params))
+
+
+class OurTeamView(webapp2.RequestHandler):
+    def get(self):
+
+        path = os.path.join(os.path.dirname(__file__), 'template/our-team.html')
+        params = {
+            'current_page': 'our-team'
+        }
+        self.response.out.write(template.render(path, params))
+
+
+class PreviewView(webapp2.RequestHandler):
+    def get(self):
+        return self.redirect("https://www.gammafund.org")
 
 
 
 app = webapp2.WSGIApplication([
     routes.DomainRoute(r'<:(gammafund.org|www.gammafund.org|localhost)>', [
-        webapp2.Route('/', MainHandler),
+        webapp2.Route('/', IndexView),
+        webapp2.Route('/strategy', StrategyView),
+        webapp2.Route('/our-team', OurTeamView),
     ]),
 
-    ('/', PreviewHandler)
+    ('/', PreviewView)
 ])

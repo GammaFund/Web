@@ -1,6 +1,9 @@
 
 body{
     border-top: 4px solid #ff5722;
+}
+
+body.home{
     background-image: repeating-linear-gradient(135deg, #fff, #fff 20px, #fffceb 20px, #fffceb 51px);
     min-height: 400px;
 }
@@ -11,19 +14,62 @@ body{
 ul.logo_ul{}
 
 .link_bar{
-    position: absolute; top: 28px; right:0;z-index: 1;
+    position: absolute;
+    top: 24px;
+    right:0;
+    z-index: 1;
 }
 .link_bar a{margin-left: 6px;}
 
-.logo{font-size: 3em; font-family: verdana;color: #ff5723;font-weight: 100;}
-.headline{font-size: 1.3em;color:#777;}
-.headline_text{}
-
-.header_div{
-    padding-bottom: 10px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+.logo{
+    font-size: 40px;
+    font-family: verdana;
+    font-weight: 100;
+    line-height: 54px;
+    color: #ff5723;
 }
+.headline{
+    color:#777;
+    font-size: 16px;
+    margin-top: -4px;
+}
+
+.header-div{
+    padding-bottom: 8px;
+    background-color: #fff;
+    /*border-bottom: 1px solid #ddd;*/
+}
+
+.nav-bar-container{
+    background-color: #fff5f2;
+    border-bottom: 1px solid #ddd;
+    min-height: 24px;
+    padding-top:4px;
+}
+.nav-bar-container ul{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar-container ul li{
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 20px;
+    border: 1px solid transparent;
+    border-bottom: none;
+}
+.nav-bar-container ul a{
+    color: #555;
+}
+.nav-bar-container ul a.selected li,
+.nav-bar-container ul a:hover li{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+}
+
 .section_item_inner{
     background-color: rgba(255,255,255,0.7); border: 2px solid #ff5723;
 }
@@ -36,6 +82,13 @@ ul.logo_ul{}
     margin-top: 14px !important;
 }
 
+
+.strategy-content{}
+.strategy-content h4{margin-top: 30px;}
+.strategy-content ul{margin: 0 16px;}
+.strategy-content ul li{list-style: circle; line-height: 24px;}
+.strategy-content div.img-container{text-align: center;}
+.strategy-content div img{max-width: 440px;}
 
 /*
 
