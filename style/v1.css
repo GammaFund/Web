@@ -35,7 +35,7 @@ ul.logo_ul{}
 }
 
 .header-div{
-    padding-bottom: 8px;
+    padding-bottom: 6px;
     background-color: #fff;
     /*border-bottom: 1px solid #ddd;*/
 }
@@ -90,6 +90,39 @@ ul.logo_ul{}
 .strategy-content div.img-container{text-align: center;}
 .strategy-content div img{max-width: 440px;}
 
+.team-section-title{
+    font-size: 1.3em;
+    padding: 4px 10px;
+    margin: 6px 0;
+    border-top: 1px solid #ff5722;
+    border-left: 5px solid #ff5722;
+    background-color: #f8f8f8;
+}
+
+.team-members{
+    padding: 8px 0;
+}
+.row .col.team-member-box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.team-member-box .team-member-avator img{
+    width: 100%;
+    max-width: 140px;
+}
+.team-member-box .team-member-avator i{
+    font-size: 4em;
+}
+.team-member-box .team-member-name{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.team-member-box .team-member-title{
+    color: #777;
+    font-size: .9em;
+}
+
 /*
 
 .price_block{border-left:none;border-right:none;text-align: center;}
@@ -116,7 +149,7 @@ ul.logo_ul{}
 .section_item .ico_details_box{
     padding:18px 28px;
 }
-.section_announcement{font-size: 2.5em;color:#ff5722;}
+.index-section-announcement{font-size: 2.5em;color:#ff5722;}
 
 a.download_json{color:#ff5722;}
 .ico_section{padding: 30px 0;}
@@ -190,16 +223,17 @@ input[type=text]:focus:not([readonly])+label{
     }
 }
 @media only screen and (max-width: 993px){
-    /*.home_background{background-size: auto 100%;background-position: 50% 50%;}*/
-    .section_announcement{font-size: 2em;}
+    .index-section-announcement{font-size: 2em;}
 }
 @media only screen and (max-width: 600px){
     .footer_block nav{text-align: center;min-height: 56px;height: auto;}
     .footer_block .links_ui{
         float: none; height: 50px; display: inline-block; margin: auto;
     }
+
+    .team-member-box{text-align: center;}
+    .team-member-box .team-member-avator img{
+        max-width: 110px;
+    }
 }
-@media only screen and (max-width: 1000px) and (min-width: 500px){
-    ul.top_navbar li{padding:10px 8px;}
-    .ico_section .info_value{font-size: 1.5em;}
-}
+
