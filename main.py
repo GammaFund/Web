@@ -17,6 +17,16 @@ class IndexView(webapp2.RequestHandler):
         self.response.out.write(template.render(path, params))
 
 
+class InitiativeView(webapp2.RequestHandler):
+    def get(self):
+
+        path = os.path.join(os.path.dirname(__file__), 'template/initiative.html')
+        params = {
+            'current_page': 'initiative'
+        }
+        self.response.out.write(template.render(path, params))
+
+
 class StrategyView(webapp2.RequestHandler):
     def get(self):
 
@@ -46,6 +56,7 @@ class PreviewView(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     routes.DomainRoute(r'<:(gammafund.org|www.gammafund.org|localhost)>', [
         webapp2.Route('/', IndexView),
+        webapp2.Route('/initiative', InitiativeView),
         webapp2.Route('/strategy', StrategyView),
         webapp2.Route('/our-team', OurTeamView),
     ]),
