@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>GAMMA - Your decentralized venture fund</title>
+    <title>GAMMA - Your Decentralized Venture Fund</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=0.7">
 
@@ -25,6 +25,24 @@
 </head>
 <body class="{% block body_class %}{{ current_page }}{% endblock %}">
 
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2271694179540415');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2271694179540415&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 
 {% block body_header_content %}
 
@@ -37,7 +55,7 @@
 
                     <a href="/" class="logo">Gamma</a>
                     <div class="headline">
-                        Your decentralized venture fund
+                        Your Decentralized Venture Fund
                     </div>
 
                 </li>
@@ -55,7 +73,7 @@
     <div class="container">
         <ul class="nav-bar">
             <a href="./" {% if current_page == "home" %}class="selected"{% endif %}><li>Home</li></a>
-            <a href="./initiative" {% if current_page == "initiative" %}class="selected"{% endif %}><li>Initiative</li></a>
+            <a href="./initiative" {% if current_page == "initiative" %}class="selected"{% endif %}><li>Initiative/ White Paper</li></a>
             <a href="./strategy" {% if current_page == "strategy" %}class="selected"{% endif %}><li>Strategy</li></a>
             <a href="./our-team" {% if current_page == "our-team" %}class="selected"{% endif %}><li>Our Team</li></a>
         </ul>
@@ -82,7 +100,7 @@
                 <ul class="links_ui">
                     {# <li><a href="https://slack.gammafund.org/" target="_blank"><i class="fa fa-slack" aria-hidden="true"></i></a></li> #}
                     <li><a href="https://www.facebook.com/gammafund/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    {# <li><a href="https://twitter.com/gammafund" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> #}
+                    <li><a href="https://twitter.com/GammaFund_Inc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="https://instagram.com/gammafund" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                     <li><a href="https://github.com/GammaFund" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                     <li><a href="mailto:contact@gammafund.org"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
@@ -111,6 +129,17 @@
   gtag('config', 'UA-109507368-1');
 </script>
 
+
+<!-- Start of Rocket.Chat Livechat Script -->
+<script type="text/javascript">
+(function(w, d, s, u) {
+    w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+    var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+    j.async = true; j.src = 'https://rocket-chat.cf/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
+    h.parentNode.insertBefore(j, h);
+})(window, document, 'script', 'https://rocket-chat.cf/livechat');
+</script>
+<!-- End of Rocket.Chat Livechat Script -->
 
 
 </body>
